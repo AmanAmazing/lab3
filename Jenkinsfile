@@ -20,4 +20,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {
+            archiveArtifacts artifacts: 'output.txt', allowEmptyArchive: true
+        }
+    }
 }
